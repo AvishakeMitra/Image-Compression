@@ -41,16 +41,14 @@ int main()
   }
   else
   {	
-    t = clock();	 
+   	t = clock();	 
 	puts("Compressing 25%......");
 /*-------------------------File Input-----------------------*/     
 	fscanf(fp,"%c%c\n%d%d\n%d",&t1,&t2,&h,&v,&t3);
 	index=3;
 	while(!feof(fp))
-	{
-        fscanf(fp, "%d ", &s[index++]);
-     
-	}
+	       	fscanf(fp, "%d ", &s[index++]);
+     	
 	s[index]='\0';
 	s[0]=' ';
 	s[1]='$';
@@ -76,9 +74,9 @@ int main()
 	}
 	s2[i]=calloc(len+5,sizeof(char));
 	free(s);
-    /*puts("The String after Rotation is : \n");
-    puts("----------------------------------------");*/
-    /*for(i=0;i<=len;i++)
+       /*puts("The String after Rotation is : \n");
+       puts("----------------------------------------");*/
+       /*for(i=0;i<=len;i++)
 		puts(s2[i]);*/
 	puts("Compressing 60%......");
 /*------------------------BLOCK SORTING---------------------------*/  
@@ -87,8 +85,8 @@ int main()
   
 	puts("Compressing 75%......");
 /*---------------------BWT CODE GENERATION-------------------------*/
-    /*puts("The Sorted String after Rotation is : \n");
-    puts("--------------------------------------------");*/
+        /*puts("The Sorted String after Rotation is : \n");
+        puts("--------------------------------------------");*/
 	unsigned char *op1=calloc(len+5,sizeof(char));
 	for(i=0;i<=len;i++)//bwt code generation 
 	{
@@ -137,7 +135,7 @@ int main()
 	free(frle);
   
 /*--------------Calculatting the Compression Percentage-----------------*/
-    FILE *fr=fopen(ipname,"r"); 
+        FILE *fr=fopen(ipname,"r"); 
 	FILE *fs=fopen(opname , "r" );
 	fseek(fr, 0, SEEK_END);    
 	sizei=ftell(fr);  
