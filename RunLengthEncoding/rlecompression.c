@@ -60,7 +60,7 @@ int main()
 	}
 	fclose(fp);
 	fclose(fq);
-    puts("-------COMPRESSION COMPLETE SUCESSFULLY-------");	
+        puts("-------COMPRESSION COMPLETE SUCESSFULLY-------");	
 	FILE *fr=fopen(ipname,"r"); 
 	FILE *fs=fopen(opname , "r" );
 	fseek(fr, 0, SEEK_END);    
